@@ -1,0 +1,531 @@
+$line: 24px;
+$lite-text: #666;
+
+body {
+  font-family: sans-web, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+p {
+  color: $lite-text;
+  letter-spacing: 1.4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-12 {
+  margin-bottom: 25px;
+}
+
+section {
+  @media (min-width: 768px) {
+    padding: 95px 0 65px;
+  }
+  padding: 65px 0 25px;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-family: oswald, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: $line;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-family: oswald, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+h4 {
+  font-family: lobster, sans-serif;
+  font-size: 18px;
+  line-height: $line;
+  letter-spacing: 1.1px;
+  text-transform: capitalize;
+  margin-bottom: 14px;
+}
+
+.headings {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sign {
+  color: $lite-text;
+  font-family: sans-web, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: $line;
+  letter-spacing: 0.35px;
+  display: block;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.more_link {
+  padding: 5px 10px;
+  font-family: oswald, sans-serif;
+  font-size: 18px;
+  color: #000;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+// section advantages
+.advantages {
+  padding-top: 75px;
+  padding-bottom: 20px;
+  .row {
+    margin-bottom: 45px;
+  }
+  h3 {
+    margin-bottom: 5px;
+  }
+  .sign {
+    margin-bottom: 12px;
+  }
+  .align-right {
+    text-align: center;
+  }
+}
+
+// section about
+@keyframes bounce {
+  // from {
+  //   left: 0;
+  // }
+  to {
+    transform: translateX(10px);
+  }
+}
+.about {
+  i {
+    padding-left: 10px;
+  }
+  a {
+    color: #000;
+
+    &:hover i {
+      animation: bounce 1s infinite;
+      animation-timing-function: steps(4, end);
+    }
+  }
+}
+
+// section works
+.portfolio {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding-bottom: 45px;
+  .work {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .active {
+    color: $lite-text;
+  }
+  h2 {
+    margin-bottom: 45px;
+  }
+  .myBtnContainer {
+    margin-bottom: 42px;
+  }
+  .btn {
+    cursor: pointer;
+    background: transparent;
+    border: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "oswald";
+    color: #000;
+    &::after {
+      content: "/";
+      padding-left: 10px;
+      color: #e9e9e9;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: $lite-text;
+      border: 0;
+      border-radius: 0;
+      border-color: transparent;
+      outline: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+    max-height: 440px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    margin-bottom: 5px;
+  }
+  .sign {
+    display: inline-block;
+    width: 85%;
+    padding-bottom: 25px;
+    margin-bottom: 65px;
+    border-bottom: 2px solid #ededed;
+  }
+}
+
+// section voyager
+.voyager {
+  padding: 65px 0 45px;
+  position: relative;
+  background-image: url("../media/maastricht-street.jpg");
+  background-size: cover;
+  color: #fff;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  h2 {
+    font-family: oswald-light, sans-serif;
+    font-size: 54px;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    margin-bottom: 25px;
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .more_link {
+    color: #fff;
+    &:after {
+      background-color: #fff;
+    }
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+// section about_us
+.about_us {
+  padding: 45px 0 20px;
+  background-color: #f9f9f9;
+  color: #909090;
+  svg {
+    fill: #909090;
+  }
+  .count-number {
+    font-family: oswald-bold;
+    font-size: 22px;
+    color: #000;
+  }
+}
+
+// section team
+.team {
+  p {
+    max-width: 405px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .member {
+    text-align: center;
+    border-bottom: 2px solid #ededed;
+    margin-bottom: 25px;
+    img {
+      max-width: 100%;
+      max-height: 320px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+    .sign {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// section news
+.news {
+  .news-img img {
+    max-height: 280px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  h3 {
+    margin-bottom: 15px;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  .separator {
+    height: 1px;
+    width: 30px;
+    background: $lite-text;
+    margin: 25px 0;
+  }
+  p {
+    margin-bottom: 25px;
+  }
+  ul {
+    display: flex;
+    a {
+      display: inline-block;
+      font-family: sans-web, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      color: $lite-text;
+      margin-right: 5px;
+      &::before {
+        content: "#";
+      }
+      &:hover {
+        color: #000;
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
+
+// section skills
+.skills {
+  h3 {
+    margin-bottom: 12px;
+  }
+  .sign {
+    margin-bottom: 25px;
+  }
+  .bars {
+    display: flex;
+  }
+  .bar {
+    position: relative;
+    width: 25px;
+    height: 300px;
+    background-color: black;
+    margin-right: 10px;
+    span {
+      position: absolute;
+      bottom: 5px;
+      font-family: sans-web, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
+      color: #fff;
+    }
+  }
+}
+
+// section logos
+.slider-logo {
+  .slick-slide {
+    background-color: #f9f9f9;
+    min-height: 130px;
+    text-align: center;
+    line-height: 130px;
+    border-left: 2px solid #e9e9e9;
+    border-top: 2px solid #e9e9e9;
+    border-bottom: 2px solid #e9e9e9;
+    img {
+      display: inline-block;
+    }
+  }
+}
+
+// section testemonials
+.testemonials {
+  padding: 20px 0;
+  background-image: url(../media/lines.png);
+  background-size: cover;
+  img {
+    height: 100%;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  h4 {
+    margin-bottom: 15px;
+  }
+  i {
+    color: #c9c9c9;
+    font-size: 30px;
+    margin-bottom: 15px;
+    @media (min-width: 768px) {
+      position: absolute;
+      left: -20px;
+      top: 0;
+    }
+  }
+  .slide {
+    display: flex;
+    justify-content: space-around;
+  }
+  .slide-image {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      width: 40%;
+    }
+  }
+  .slide-text {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    @media (min-width: 768px) {
+      position: relative;
+      width: 40%;
+      text-align: right;
+    }
+  }
+  .slick-dots {
+    bottom: 0;
+    z-index: 5;
+  }
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+// section contact form
+.contact-form {
+  background-color: #f9f9f9;
+  form {
+    display: flex;
+    flex-direction: column;
+    .message {
+      border: 0;
+      font-size: 16px;
+      height: 45px;
+      background: transparent;
+      box-shadow: none;
+      border-bottom: 2px solid #d1d1d1;
+      border-radius: 0;
+      overflow: auto;
+      resize: none;
+      &:focus {
+        border-color: #909090;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(104, 104, 104, 0.6);
+      }
+    }
+    input {
+      border: 0;
+      font-size: 16px;
+      height: 45px;
+      background: transparent;
+      border-bottom: 2px solid #d1d1d1;
+      &:focus {
+        border-color: #909090;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(104, 104, 104, 0.6);
+      }
+    }
+  }
+  .center-align {
+    margin-top: 50px;
+  }
+}
+
+// section contacts
+.contacts {
+  p {
+    max-width: 700px;
+    margin: 0 auto 50px;
+  }
+  span {
+    display: block;
+    font-family: oswald, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  i {
+    font-size: 26px;
+    color: #909090;
+    margin-bottom: 10px;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.who-we-are {
+  background-color: #f9f9f9;
+}
+
+// section video
+.promo-video {
+  padding: 0;
+  position: relative;
+  video {
+    width: 100%;
+    height: 600px;
+  }
+  .btn-play {
+    font-size: 100px;
+    z-index: 10;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}

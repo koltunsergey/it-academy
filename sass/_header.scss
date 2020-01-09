@@ -1,0 +1,152 @@
+// styles for header
+h1 {
+  font-family: oswald-light, sans-serif;
+  font-size: 54px;
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-family: oswald-bold, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 15px;
+}
+
+.wr-header {
+  background-color: #faefdb;
+  padding-top: 0;
+  padding-bottom: 0;
+  @media (min-width: 768px) {
+    background-image: url("../media/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+    line-height: 18px;
+    margin-bottom: 40px;
+  }
+  .row {
+    height: 100vh;
+  }
+}
+
+.menu-btn {
+  color: #fff;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 10px;
+  right: 05px;
+  z-index: 5;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 13px;
+    }
+    &:nth-child(4) {
+      top: 26px;
+    }
+  }
+}
+
+.main-menu {
+  width: 100%;
+  height: 50px;
+  background-color: #292929;
+  color: #fff;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  li {
+    display: none;
+  }
+}
+
+.menu-open {
+  font-family: oswald-bold, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 80px;
+  text-align: center;
+  background-color: #292929;
+  .logo {
+    display: none;
+  }
+  li {
+    display: block;
+    padding: 24px 0;
+    &:hover {
+      background-color: #f9f9f9;
+      color: #292929;
+      cursor: pointer;
+    }
+  }
+  a:visited {
+    color: #666;
+  }
+  span {
+    &:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-menu {
+    position: absolute;
+    width: 65px;
+    height: 100%;
+  }
+  .menu-btn {
+    position: absolute;
+    left: 10px;
+  }
+  .menu-open {
+    width: 300px;
+  }
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: rotate(270deg);
+  }
+}

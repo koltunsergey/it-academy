@@ -1,0 +1,40 @@
+footer {
+  padding: 45px 0;
+  background-color: #292929;
+  text-align: center;
+  .footer_logo {
+    display: block;
+    color: #fff;
+    font-family: oswald;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
+  }
+  ul {
+    display: inline-flex;
+    margin-bottom: 25px;
+    li {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .fab,
+      .fas {
+        color: #292929;
+        font-size: 18px;
+        background: #707070;
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
